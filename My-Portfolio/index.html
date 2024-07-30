@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Front-End React Developer</p>
+                <h1>Hi, I'm <span>Dharam</span> Nath Jha </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/scroll.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hello, I'm Dharam Nath Jha, a budding Frontend developer from Kolkata with a keen interest in creating intuitive and engaging web experiences. Though I'm at the beginning of my professional journey, I've had the opportunity to intern for six months, where I gained valuable hands-on experience in Frontend development. My work has involved building projects using HTML, CSS, JavaScript, and React, which helped me develop a solid foundation in front-end technologies. In my free time, I enjoy playing cricket, which keeps me active and helps me unwind. I'm always eager to learn new skills and take on new challenges. If you'd like to know more about my work or discuss potential collaborations, please feel free to reach out.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>React</li>
+                            <li>Javascript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>SEO</li>       
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>Frontend Developer Intern at Sunburst Infotech</li>
+                            <li>Technical Content Writer Intern at Sterling Technolabs</li>
+                            <li>Technical Content Writer Intern at Codingzap</li>
+                            <li>SEO Expert and Content Writer Intern at Swastik Classes</li>     
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>Btech from Calcutta Institute of Engineering and Management in 2024</li>
+                            <li>Higher Secondary from Mahavir Institute of Education and Research in 2019</li>
+                            <li>Secondary from Mahavir Institute of Education and Research in 2017</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/scroll.png">
+                    <div class="layer">
+                        <h3>social media app</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore maxime animi. Praesentium, in quos!</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/scroll.png">
+                    <div class="layer">
+                        <h3>Blogging website</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore maxime animi. Praesentium, in quos!</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/scroll.png">
+                    <div class="layer">
+                        <h3>Agro Smart Hub</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores labore maxime animi. Praesentium, in quos!</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+      </div>
+
+      <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p> <i class="fa-solid fa-envelope"></i> djha4614@gmail.com</p>
+                    <p> <i class="fa-solid fa-phone"></i> 7980614349</p>
+                    <div class="social-icons">
+                        <a href="www.linkedin.com/in/dharam-nath-jha-6085921b2"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-solid fa-x"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                <a href="images/My Resume (1).pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+      </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+var sidemenu = document.getElementById("sidemenu");
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbySrNKGyejKECTaDcgbk74bkf9p6toS59kh9ygluK8HvhblyxlKfIm52-FpKTYz80Bh/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "Message sent successfully";
+        setTimeout(function(){
+            msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+    })
+    .catch(error => console.error('Error!', error.message));
+});
+      </script>
+</body>
+</html>
